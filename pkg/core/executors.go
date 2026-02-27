@@ -2,6 +2,7 @@ package core
 
 import (
 	"context"
+	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -116,7 +117,8 @@ func (e *Engine) executeTemplateWithTargets(ctx context.Context, template *templ
 					}
 					if match {
 						if e.CheckHoneypot(t.value.Input) {
-							e.options.Logger.Info().Msgf("[INF] Target %s appears to be a honeypot, skipping further scans\n", t.value.Input)
+							sanitizedInput := strings.ReplaceAll(strings.ReplaceAll(t.value.Input, "\n", ""), "\r", "")
+							e.options.Logger.Info().Msgf("[INF] Target %s appears to be a honeypot, skipping further scans\n", sanitizedInput)
 						}
 					}
 					results.CompareAndSwap(false, match)
@@ -240,7 +242,8 @@ func (e *Engine) executeTemplatesOnTarget(ctx context.Context, alltemplates []*t
 			}
 			if match {
 				if e.CheckHoneypot(value.Input) {
-					e.options.Logger.Info().Msgf("[INF] Target %s appears to be a honeypot, skipping further scans\n", value.Input)
+					sanitizedInput := strings.ReplaceAll(strings.ReplaceAll(value.Input, "\n", ""), "\r", "")
+					e.options.Logger.Info().Msgf("[INF] Target %s appears to be a honeypot, skipping further scans\n", sanitizedInput)
 				}
 			}
 			results.CompareAndSwap(false, match)
