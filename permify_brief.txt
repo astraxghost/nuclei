@@ -1,0 +1,17 @@
+Steps to solve:
+
+    Start working: Comment /attempt #146 with your implementation plan
+    Submit work: Create a pull request including /claim #146 in the PR body to claim the bounty
+    Receive payment: 100% of the bounty is received 2-5 days post-reward. Make sure you are eligible for payouts
+
+Don't wait to be assigned. A reward will be given for the best PR.
+
+Thank you for contributing to Permify/permify!
+
+Add a bounty • Share on socials
+Attempt 	Started (GMT+0) 	Solution
+🟢 @hungaikev 	Dec 5, 2023, 8:46:40 AM 	WIP
+🔴 @debaa98 	Dec 5, 2023, 2:20:27 PM 	WIP
+🟢 @rodfer0x80 	Dec 12, 2023, 12:26:19 AM 	WIP
+🔴 @onyedikachi-david 	May 21, 2024, 8:45:40 PM 	WIP
+🟢 @harshsbhat 	Aug 14, 2024, 7:40:19 PM 	WIP
